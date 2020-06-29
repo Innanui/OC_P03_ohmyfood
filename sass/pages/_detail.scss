@@ -1,0 +1,49 @@
+.detail{
+	@include layout_detail($menu-palette);
+	& h3{
+	margin-top:2.5em;
+	margin-bottom:2.5em;
+	font-size:40px;
+	}
+}
+
+h2, h4 {
+	text-align: center;
+}
+
+h4{
+	margin-bottom: 1.7em;
+}
+
+h2{
+	
+}
+
+section {
+	margin-bottom : 4rem;
+}
+
+ul{
+	list-style-type: none;
+	padding-right: 6rem;
+	padding-left: 6rem;
+}
+
+li{
+	display: grid;
+	grid-template-columns: 10fr 1fr;
+}
+
+li div{
+	margin: auto;
+	margin-right : 0;
+	margin-left : 0;
+}
+
+li p{
+	font-size: .9rem;
+	margin-top:0.6em;
+	margin-bottom:0.6em;
+}
+
+

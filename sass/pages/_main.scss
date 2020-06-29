@@ -1,0 +1,37 @@
+
+.cards{
+	display : grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap : $vertical-spacing-index;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top : $vertical-spacing-index;
+	margin-bottom : $vertical-spacing-index;
+}
+
+
+.card{
+	height : 300px;
+	min-width : 200px;
+	text-align : center;
+	box-shadow : 0 0 $blur-radius $blur-spread $colour-shadow;
+	display: flex;
+	flex-direction : column;
+	justify-content : center;
+	&--M1{
+	background : $colour-M1;
+	}
+	&--M2{
+	background : $colour-M2;
+	}
+	&--M3{
+	background : $colour-M3-main;
+	}
+	&--M4{
+	background : $colour-M4;
+	}
+}
+
+a{
+	text-decoration : none;
+}

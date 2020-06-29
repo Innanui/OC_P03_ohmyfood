@@ -1,0 +1,52 @@
+
+$menu-palette: (
+M1 : (
+	bg : $colour-M1,
+	txt : $colour-txt-M1,
+	),
+M2 : (
+	bg: $colour-M2,
+	txt:$colour-txtM2-1,
+	deg1:$colour-txtM2-1,
+	deg2:$colour-txtM2-3,
+	),
+M3 : (
+	bg: $colour-M3,
+	txt : $colour-txtM3,
+	deg1 : $colour-deg3-1,
+	deg2 : $colour-deg3-3,
+	),
+M4 : (
+	bg : $colour-M4,
+	txt : $colour-txtM4,
+	deg1 : $colour-deg4-1,
+	deg2 : $colour-deg4-2,
+	)
+);
+
+@mixin layout_detail ($pal){
+	@each $state, $palette in $pal{
+		&--#{$state}{
+			background-color: map-get($palette, bg);
+			color: map-get($palette, txt);
+			width : 80%;
+			padding : 20px;
+			box-shadow : 0 0 $blur-radius $blur-spread $colour-shadow;
+			margin : auto;
+		}
+	}
+}
+
+@mixin degrade ($pal){
+	@each $state, $palette in $pal{
+	&--#{$state}{
+			max-width: fit-content;
+			margin-left: auto;
+			margin-right: auto;
+			background: linear-gradient(160deg, map-get($palette,deg1), map-get($palette, deg2));
+			background-clip: text;
+		  	-webkit-background-clip: text;
+		  	color: transparent;
+		}
+	}
+}

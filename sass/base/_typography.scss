@@ -1,0 +1,60 @@
+.detail{
+	&--M2{
+	letter-spacing: .07em;
+	}
+}
+
+.card__h2, .detail__h3 {
+	@include degrade($menu-palette);
+	&--M1{
+	font-family: $font-h2-s1;
+	font-weight: lighter;
+	color : $colour-txt-M1;
+	}
+	&--M2{
+	font-family: $font-h2-s2;
+	font-weight: lighter;
+	font-size: 0.8em;
+	}
+	&--M3{
+	}
+	&--M4{
+	}
+}
+
+.card__p{
+	&--M1{
+	color:$colour-txt-M1;
+	}
+	&--M2{
+	color:$colour-txtM2-1;
+	}
+	&--M3{
+	color:$colour-deg3-3;
+	}
+	&--M4{
+	color:$colour-menu4-main;
+	}
+}
+
+.colourM21{
+	color:$colour-txtM2-1;
+}
+
+.colourM22{
+	color:$colour-txtM2-2;
+}
+
+.colourM23{
+	color:$colour-txtM2-3;
+}
+
+h2{
+	font-family: $font-button-footer;
+	margin-top:1.5em;
+}
+
+footer, button, header {
+	font-family: $font-button-footer;
+	font-weight: lighter;
+}
