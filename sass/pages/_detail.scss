@@ -5,6 +5,20 @@
 	margin-bottom:2.5em;
 	font-size:40px;
 	}
+	&__titre--M1{
+	margin-top:2.5em;
+	display : flex;
+	flex-direction : column;
+	justify-content : center;
+	& h3{
+	margin-top : 0;
+	}
+	& i {
+	margin: auto;
+	@include degrade-note;
+	font-size : 10vw;
+	}
+	}
 }
 
 h2, h4 {
@@ -15,13 +29,6 @@ h4{
 	margin-bottom: 1.7em;
 }
 
-h2{
-	
-}
-
-section {
-	margin-bottom : 4rem;
-}
 
 ul{
 	list-style-type: none;

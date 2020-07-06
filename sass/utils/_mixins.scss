@@ -50,3 +50,10 @@ M4 : (
 		}
 	}
 }
+
+@mixin degrade-note {
+	background: linear-gradient(120deg,$colour-note1,$colour-note2);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}

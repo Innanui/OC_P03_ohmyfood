@@ -2,24 +2,31 @@
 .cards{
 	display : grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-gap : $vertical-spacing-index;
-	margin-left: 10%;
-	margin-right: 10%;
-	margin-top : $vertical-spacing-index;
-	margin-bottom : $vertical-spacing-index;
+	grid-gap : 8vw;
+	margin-left: 8vw;
+	margin-right: 8vw;
+	margin-top : 8vw;
+	margin-bottom : 8vw;
 }
 
 
 .card{
-	height : 300px;
-	min-width : 200px;
+	width : 38vw;
+	height : 55vw ;
 	text-align : center;
-	box-shadow : 0 0 $blur-radius $blur-spread $colour-shadow;
+	
 	display: flex;
 	flex-direction : column;
 	justify-content : center;
 	&--M1{
 	background : $colour-M1;
+	}
+	&__h2--M1{
+	margin-top:5px;
+	}
+	& i::before{
+	font-size: 5vw;
+	@include degrade-note;
 	}
 	&--M2{
 	background : $colour-M2;
@@ -30,8 +37,31 @@
 	&--M4{
 	background : $colour-M4;
 	}
+	transform: scale(1);
+	transition: all 400ms ease-out;
+	&:hover{
+	transform : scale(1.2);
+	opacity : 0.7;
+	}
 }
+
+i{
+	font-size: 5vw;
+}
+
 
 a{
 	text-decoration : none;
 }
+
+.prochainement{
+	margin : auto;
+	margin-bottom : 80px;
+}
+
+.cards a{
+	box-shadow : 0 0 $blur-radius $blur-spread $colour-shadow;
+	overflow : hidden;
+
+}
+

@@ -1,0 +1,47 @@
+@keyframes points-moove{
+	0% {
+	transform : translateY(0px);
+	}
+	100% {
+	transform : translateY(40px);
+	}
+}
+
+@keyframes points-opacity{
+	0% {
+	opacity : 0;
+	}
+	100% {
+	opacity : 1;
+	}
+}
+
+.section__prochainement{
+	height : 70vh;
+	display : flex;
+	flex-direction : column;
+	justify-content: space-around;
+	& h2 {
+	flex : 1;
+	}
+	&__points {
+	flex : 2;
+	display: flex;
+	justify-content : space-around;
+		& div {
+		background: $colour-primary ;
+		width : 26px;
+		height : 26px;
+		border-radius : 26px;		
+		}
+		&--p1{
+		animation : points-moove 750ms ease-in infinite alternate 0ms, points-opacity 6s ease-out both 50ms;
+		}
+		&--p2{
+		animation : points-moove 750ms ease-in infinite alternate 250ms, points-opacity 6s ease-out both 50ms;
+		}
+		&--p3{
+		animation : points-moove 750ms ease-in infinite alternate 500ms, points-opacity 6s ease-out both 50ms;
+		}
+	}
+}

@@ -2,6 +2,7 @@
 /*____________COULEURS___________*/
 /*---------------------couleurs de fond header et footer*/
 /*---------------------text header*/
+/*---------------------note de musique*/
 /*---------------------shadow cards*/
 /*---------------------couleurs de fond*/
 /*---------------------couleurs de texte*/
@@ -15,9 +16,10 @@ body {
 }
 
 main {
-  margin-bottom: 80px;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .detail--M2 {
@@ -62,14 +64,26 @@ main {
 }
 .card__h2--M1, .detail__h3--M1 {
   font-family: "Devonshire", cursive;
-  font-weight: lighter;
   color: #552d32;
+  font-size: 3.5vw;
+  font-weight: lighter;
 }
 .card__h2--M2, .detail__h3--M2 {
   font-family: "Croissant One", cursive;
+  font-size: 2.5vw;
   font-weight: lighter;
-  font-size: 0.8em;
 }
+.card__h2--M3, .detail__h3--M3 {
+  font-family: "Dancing Script", cursive;
+  font-size: 4vw;
+  font-weight: lighter;
+}
+.card__h2--M4, .detail__h3--M4 {
+  font-family: "Kaushan Script", cursive;
+  font-weight: lighter;
+  font-size: 4vw;
+}
+
 .card__p--M1 {
   color: #552d32;
 }
@@ -100,20 +114,25 @@ h2 {
   margin-top: 1.5em;
 }
 
-footer, button, header {
+footer, .btn, header {
   font-family: "Montserrat", sans-serif;
   font-weight: lighter;
 }
 
-button {
+.btn {
   background-color: #579c87;
   color: #fdcb46;
   border: none;
   border-radius: 7px;
-  width: 30%;
-  height: 2em;
   font-size: 20px;
-  align-self: center;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.btn:hover {
+  cursor: pointer;
 }
 
 header {
@@ -128,6 +147,14 @@ header h1 {
   padding: 20px;
 }
 
+@keyframes wiggle {
+  25% {
+    transform: translateX(4%);
+  }
+  75% {
+    transform: translateX(-4%);
+  }
+}
 footer {
   background: #579c87;
   color: #fdcb46;
@@ -139,11 +166,17 @@ footer {
   bottom: 0;
   width: 100%;
 }
+footer div:hover {
+  animation: wiggle 200ms both 3;
+}
 footer div:nth-child(1) {
   padding-left: 20px;
 }
 footer div:nth-child(2) {
   padding-right: 20px;
+}
+footer a {
+  color: #fdcb46;
 }
 
 .detail--M1 {
@@ -183,6 +216,23 @@ footer div:nth-child(2) {
   margin-bottom: 2.5em;
   font-size: 40px;
 }
+.detail__titre--M1 {
+  margin-top: 2.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.detail__titre--M1 h3 {
+  margin-top: 0;
+}
+.detail__titre--M1 i {
+  margin: auto;
+  background: linear-gradient(120deg, #f04f60, #f6916a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 10vw;
+}
 
 h2, h4 {
   text-align: center;
@@ -190,10 +240,6 @@ h2, h4 {
 
 h4 {
   margin-bottom: 1.7em;
-}
-
-section {
-  margin-bottom: 4rem;
 }
 
 ul {
@@ -222,24 +268,35 @@ li p {
 .cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 30px;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  grid-gap: 8vw;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  margin-top: 8vw;
+  margin-bottom: 8vw;
 }
 
 .card {
-  height: 300px;
-  min-width: 200px;
+  width: 38vw;
+  height: 55vw;
   text-align: center;
-  box-shadow: 0 0 5px 3px #f1f1f1;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transform: scale(1);
+  transition: all 400ms ease-out;
 }
 .card--M1 {
   background: #fcdfdb;
+}
+.card__h2--M1 {
+  margin-top: 5px;
+}
+.card i::before {
+  font-size: 5vw;
+  background: linear-gradient(120deg, #f04f60, #f6916a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .card--M2 {
   background: #fff5fe;
@@ -250,9 +307,73 @@ li p {
 .card--M4 {
   background: #fdfffd;
 }
+.card:hover {
+  transform: scale(1.2);
+  opacity: 0.7;
+}
+
+i {
+  font-size: 5vw;
+}
 
 a {
   text-decoration: none;
+}
+
+.prochainement {
+  margin: auto;
+  margin-bottom: 80px;
+}
+
+.cards a {
+  box-shadow: 0 0 5px 3px #f1f1f1;
+  overflow: hidden;
+}
+
+@keyframes points-moove {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(40px);
+  }
+}
+@keyframes points-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.section__prochainement {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.section__prochainement h2 {
+  flex: 1;
+}
+.section__prochainement__points {
+  flex: 2;
+  display: flex;
+  justify-content: space-around;
+}
+.section__prochainement__points div {
+  background: #579c87;
+  width: 26px;
+  height: 26px;
+  border-radius: 26px;
+}
+.section__prochainement__points--p1 {
+  animation: points-moove 750ms ease-in infinite alternate 0ms, points-opacity 6s ease-out both 50ms;
+}
+.section__prochainement__points--p2 {
+  animation: points-moove 750ms ease-in infinite alternate 250ms, points-opacity 6s ease-out both 50ms;
+}
+.section__prochainement__points--p3 {
+  animation: points-moove 750ms ease-in infinite alternate 500ms, points-opacity 6s ease-out both 50ms;
 }
 
 /*# sourceMappingURL=style.css.map */
