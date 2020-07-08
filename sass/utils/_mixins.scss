@@ -7,18 +7,27 @@ M1 : (
 M2 : (
 	bg: $colour-M2,
 	txt:$colour-txtM2-1,
-	deg1:$colour-txtM2-1,
-	deg2:$colour-txtM2-3,
 	),
 M3 : (
 	bg: $colour-M3,
 	txt : $colour-txtM3,
-	deg1 : $colour-deg3-1,
-	deg2 : $colour-deg3-3,
 	),
 M4 : (
 	bg : $colour-M4,
 	txt : $colour-txtM4,
+	)
+);
+
+$palette-degrade: (
+M2 : (
+	deg1:$colour-txtM2-1,
+	deg2:$colour-txtM2-3,
+	),
+M3 : (
+	deg1 : $colour-deg3-1,
+	deg2 : $colour-deg3-3,
+	),
+M4 : (
 	deg1 : $colour-deg4-1,
 	deg2 : $colour-deg4-2,
 	)

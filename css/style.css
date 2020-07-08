@@ -45,15 +45,6 @@ main {
   font-weight: lighter;
 }
 
-.card__h2--M1, .detail__h3--M1 {
-  max-width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  background: linear-gradient(160deg, , );
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
 .card__h2--M2, .detail__h3--M2 {
   max-width: fit-content;
   margin-left: auto;

@@ -24,7 +24,7 @@
 }
 
 .card__h2, .detail__h3 {
-	@include degrade($menu-palette);
+	@include degrade($palette-degrade);
 	&--M1{
 	font-family: $font-h2-s1;
 	color : $colour-txt-M1;
