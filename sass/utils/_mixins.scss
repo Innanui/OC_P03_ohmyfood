@@ -31,8 +31,10 @@ M4 : (
 			color: map-get($palette, txt);
 			width : 80%;
 			padding : 20px;
+			padding-bottom : 60px;
 			box-shadow : 0 0 $blur-radius $blur-spread $colour-shadow;
 			margin : auto;
+			margin-bottom: 120px;
 		}
 	}
 }
@@ -56,4 +58,13 @@ M4 : (
 	background-clip: text;
 	-webkit-background-clip: text;
 	color: transparent;
+}
+
+@mixin soulignement-titre-menus($color: $colour-txtM3){
+	background: linear-gradient(to top, $color 0%,$color 2px, transparent 2.1px) no-repeat;
+	background-size: 0 100%;
+	transition : background-size 500ms ease-in-out;
+	&:hover{
+		background-size : 100% 100%;
+	}
 }

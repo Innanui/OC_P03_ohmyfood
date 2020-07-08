@@ -1,23 +1,23 @@
 .detail{
 	@include layout_detail($menu-palette);
-	& h3{
-	margin-top:2.5em;
-	margin-bottom:2.5em;
-	font-size:40px;
+	&__h3--M2{
+		font-size: 6vw;
+	}
+	&__h3--M1{
+	margin-top : 0;
+	margin-bottom : 1em;
+	font-size : 6vw;
 	}
 	&__titre--M1{
-	margin-top:2.5em;
-	display : flex;
-	flex-direction : column;
-	justify-content : center;
-	& h3{
-	margin-top : 0;
-	}
+		margin-top:2.5em;
+		display : flex;
+		flex-direction : column;
+		justify-content : center;
 	& i {
-	margin: auto;
-	@include degrade-note;
-	font-size : 10vw;
-	}
+		margin: auto;
+		@include degrade-note;
+		font-size : 10vw;
+		}
 	}
 }
 
@@ -26,14 +26,23 @@ h2, h4 {
 }
 
 h4{
-	margin-bottom: 1.7em;
+	font-size: 2.5vw;
+	letter-spacing: 1px;
+	white-space : nowrap;
 }
 
 
+
+h3{
+	margin-top:1em;
+	margin-bottom:1em;
+	font-size: 8vw;
+	}
+
 ul{
 	list-style-type: none;
-	padding-right: 6rem;
-	padding-left: 6rem;
+	padding-right: 5vw;
+	padding-left: 5vw;
 }
 
 li{
@@ -45,12 +54,91 @@ li div{
 	margin: auto;
 	margin-right : 0;
 	margin-left : 0;
+	text-align : right;
 }
 
-li p{
-	font-size: .9rem;
-	margin-top:0.6em;
-	margin-bottom:0.6em;
+li {
+	& p{
+		font-size: 2vw;
+		margin-top:0.6em;
+		margin-bottom:0.6em;
+	}
+	& div{
+		font-size: 2.5vw;
+	}
+}
+
+img{
+	width: 20vw;
+}
+
+.detail__h4{
+	display : flex;
+	justify-content : space-between;
+	align-items: center;
+}
+
+.detail__h4--M2 img:first-child {
+	transform : rotate(0.5turn);
+}
+
+.detail__h4--M4 img:first-child {
+	transform : scale(-1, 1);
+}
+
+.detail__h4--M1 {
+	padding-left: 5vw;
+	padding-right: 5vw;
+	& h4{
+	font-size: 3vw;
+	margin-top: 0;
+	margin-bottom:0;
+	font-weight: normal;
+	@include soulignement-titre-menus($colour-txt-M1);
+	}
+}
+
+.detail--M1 ul{
+	margin-bottom: 4em;
+}
+
+.titre_fin_detail_menu1{
+	margin : auto;
+	display: flex;
+	justify-content : center;
+	& i {
+	@include degrade-note;
+	margin-right: 10px;
+	}
+	& p {
+	font-family: $font-h2-s1;
+	font-size: 4vw;
+	margin : 0;
+	}
+}
+
+/* animation soulignement titres */
+
+.colourM21{
+	& h4{
+	@include soulignement-titre-menus($colour-txtM2-1);
+	}
+}
+
+.colourM22{
+	& h4{
+	@include soulignement-titre-menus($colour-txtM2-2);
+	}
+}
+
+.colourM23{
+	& h4{
+	@include soulignement-titre-menus($colour-txtM2-3);
+	}
+}
+
+.detail--M3 h4, .detail--M4 h4{
+	@include soulignement-titre-menus;
 }
 
 

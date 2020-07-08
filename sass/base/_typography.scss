@@ -1,6 +1,25 @@
 .detail{
-	&--M2{
-	letter-spacing: .07em;
+	&--M2 {
+		letter-spacing: .07em;
+		font-family : times;
+	}
+	&--M1 {
+		font-family : $font-M1;
+		& h4, p{
+			font-weight: lighter;
+		}
+	}
+	&--M3 {
+		font-family : $font-M1;
+		& h4, p{
+			font-weight: lighter;
+		}
+	}
+	&--M4 {
+		font-family : $font-M1;
+		& h4, p{
+			font-weight: lighter;
+		}
 	}
 }
 
@@ -9,38 +28,62 @@
 	&--M1{
 	font-family: $font-h2-s1;
 	color : $colour-txt-M1;
-	font-size : 3.5vw;
 	font-weight : lighter;
 	}
 	&--M2{
 	font-family: $font-h2-s2;
-	font-size: 2.5vw;
 	font-weight : lighter;
 	}
 	&--M3{
 	font-family:$font-h2-s3;
-	font-size: 4vw;
 	font-weight : lighter;
 	}
 	&--M4{
 	font-family:$font-h2-s4;
 	font-weight : lighter;
+	
+	}
+}
+
+.card__h2{
+	&--M1{
+	font-size : 3.5vw;
+	}
+	&--M2{
+	font-size: 2.5vw;
+	}
+	&--M3{
+	font-size: 4vw;
+	}
+	&--M4{
 	font-size: 4vw;
 	}
 }
 
+.card h2{
+	margin-bottom : 2vw;
+}
+
+
 .card__p{
+	font-size: 5vw;
+	margin-top : 1vw;
 	&--M1{
 	color:$colour-txt-M1;
+	font-family: $font-M1;
 	}
 	&--M2{
 	color:$colour-txtM2-1;
 	}
 	&--M3{
 	color:$colour-deg3-3;
+	font-family: $font-M1;
+	font-weight : lighter;
 	}
 	&--M4{
 	color:$colour-menu4-main;
+	font-family: $font-M1;
+	font-weight : lighter;
 	}
 }
 
