@@ -502,8 +502,6 @@ a {
   border: none;
   border-radius: 7px;
   display: flex;
-  flex-direction: line;
-  justify-content: space around;
 }
 
 .section__prochainement__points {
