@@ -152,16 +152,13 @@ footer, .btn, header {
 }
 
 .btn {
-  background-color: #579c87;
   color: #fdcb46;
-  border: none;
-  border-radius: 7px;
   font-size: 20px;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 30px;
-  padding-right: 30px;
+  padding-right: 5px;
 }
 .btn:hover {
   cursor: pointer;
@@ -480,10 +477,16 @@ a {
 
 @keyframes points-moove {
   0% {
-    transform: translateY(0px);
+    transform: translateY(0);
+    animation-timing-function: ease-in-out;
   }
-  100% {
-    transform: translateY(40px);
+  25% {
+    transform: translateY(-7px);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: translateY(0px);
+    animation-timing-function: ease-in-out;
   }
 }
 @keyframes points-opacity {
@@ -494,34 +497,36 @@ a {
     opacity: 1;
   }
 }
-.section__prochainement {
-  height: 70vh;
+.prochainement {
+  background-color: #579c87;
+  border: none;
+  border-radius: 7px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-direction: line;
+  justify-content: space around;
 }
-.section__prochainement h2 {
-  flex: 1;
-}
+
 .section__prochainement__points {
-  flex: 2;
+  padding: 7px;
+  width: 25px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .section__prochainement__points div {
-  background: #579c87;
-  width: 26px;
-  height: 26px;
-  border-radius: 26px;
+  background: #fdcb46;
+  width: 5px;
+  height: 5px;
+  border-radius: 5px;
 }
 .section__prochainement__points--p1 {
-  animation: points-moove 750ms ease-in infinite alternate 0ms, points-opacity 6s ease-out both 50ms;
+  animation: points-moove 2000ms ease-in-out infinite 0ms, points-opacity 6s ease-out both 50ms;
 }
 .section__prochainement__points--p2 {
-  animation: points-moove 750ms ease-in infinite alternate 250ms, points-opacity 6s ease-out both 50ms;
+  animation: points-moove 2000ms ease-in-out infinite 150ms, points-opacity 6s ease-out both 50ms;
 }
 .section__prochainement__points--p3 {
-  animation: points-moove 750ms ease-in infinite alternate 500ms, points-opacity 6s ease-out both 50ms;
+  animation: points-moove 2000ms ease-in-out infinite 300ms, points-opacity 6s ease-out both 50ms;
 }
 
 /*# sourceMappingURL=style.css.map */

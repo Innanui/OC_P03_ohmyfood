@@ -1,9 +1,15 @@
 @keyframes points-moove{
 	0% {
-	transform : translateY(0px);
+	transform : translateY(0);
+	animation-timing-function: ease-in-out;
 	}
-	100% {
-	transform : translateY(40px);
+	25% {
+	transform : translateY(-7px);
+	animation-timing-function: ease-in-out;
+	}
+	50% {
+	transform : translateY(0px);
+	animation-timing-function: ease-in-out;
 	}
 }
 
@@ -16,32 +22,36 @@
 	}
 }
 
-.section__prochainement{
-	height : 70vh;
+.prochainement{
+	background-color: $colour-primary;
+	border: none;
+	border-radius: 7px;
 	display : flex;
-	flex-direction : column;
-	justify-content: space-around;
-	& h2 {
-	flex : 1;
-	}
+	flex-direction : line;
+	justify-content : space around;
+}
+
+.section__prochainement{
 	&__points {
-	flex : 2;
+	padding : 7px;
+	width : 25px;
 	display: flex;
 	justify-content : space-around;
+	align-items : center;
 		& div {
-		background: $colour-primary ;
-		width : 26px;
-		height : 26px;
-		border-radius : 26px;		
+		background: $colour-secondary ;
+		width : 5px;
+		height : 5px;
+		border-radius : 5px;		
 		}
 		&--p1{
-		animation : points-moove 750ms ease-in infinite alternate 0ms, points-opacity 6s ease-out both 50ms;
+		animation : points-moove 2000ms ease-in-out infinite 0ms, points-opacity 6s ease-out both 50ms;
 		}
 		&--p2{
-		animation : points-moove 750ms ease-in infinite alternate 250ms, points-opacity 6s ease-out both 50ms;
+		animation : points-moove 2000ms ease-in-out infinite 150ms, points-opacity 6s ease-out both 50ms;
 		}
 		&--p3{
-		animation : points-moove 750ms ease-in infinite alternate 500ms, points-opacity 6s ease-out both 50ms;
+		animation : points-moove 2000ms ease-in-out infinite 300ms, points-opacity 6s ease-out both 50ms;
 		}
 	}
 }
